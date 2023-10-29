@@ -7,7 +7,8 @@ and view it on your computer, or view it right in your browser!
 What your seeing right now is a repository. Basically a collection of files
 stored online. You're reading README.md, the file that stores the description.
 The only other file in this repository is my code. How do i get that code? you may be asking.
-Well, you can either click this link: 
+Well, you can either click this link: https://github.com/brickyboy09/MH_z19-sensor-code-w-tkinter/blob/main/main.py
 OR
 If your feeling smart enough you can find in the list of files above "main.py" and click on it. 
 This will take you to my code.
+If you would like to download my code, you can
