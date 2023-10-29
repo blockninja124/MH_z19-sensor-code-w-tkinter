@@ -35,7 +35,7 @@ def spin_box2():
 #remove.pack()
 
 
-text_size = 10 #default font size - TODO: find a way to set the default spinbox value to this aswell
+text_size = 10 #default font size
 
 padding_label = Label(root, text=" ", font=("Times", 20))
 padding_label.pack() #creating an object for padding (probably a better way but whatever)
@@ -45,15 +45,20 @@ co_level.pack() #The CO2 level label cant be .place()'d because it becomes off-c
 
 
 thing = ttk.Spinbox(root, wrap=True, from_ = 1, to=10, width=3, command=spin_box)
-thing.place(x=250,y=70+text_size)
+thing.place(x=265,y=70+text_size)
+thing.delete(0, "end")
+thing.insert(0, "1")
 
 label1 = Label(root, text="Update interval: ")
 label1.place(x=150, y=70+text_size)
 label2 = Label(root, text="seconds")
-label2.place(x=310, y =70+text_size)
+label2.place(x=325, y =70+text_size)
 
 thing2 = ttk.Spinbox(root, wrap=False, from_ = 5, to=35, width=3, command=spin_box2)
-thing2.place(x=250,y=90+text_size)
+thing2.place(x=265,y=90+text_size)
+
+thing2.delete(0, "end")
+thing2.insert(0, "10")
 
 label3 = Label(root, text="Font size: ")
 label3.place(x=150, y=90+text_size)
@@ -74,10 +79,10 @@ def update_labels(): #this function moves the position of everything below the c
     label3.pack_forget()
     full_c.pack_forget()
     label4.pack_forget()
-    thing.place(x=250,y=73+text_size)
+    thing.place(x=265,y=73+text_size)
     label1.place(x=150, y=73+text_size)
-    label2.place(x=310, y =73+text_size)
-    thing2.place(x=250,y=93+text_size)
+    label2.place(x=325, y =73+text_size)
+    thing2.place(x=265,y=93+text_size)
     label3.place(x=150, y=93+text_size)
     full_c.place(x=150, y = 120+text_size)
     label4.place(x=100, y = 150+text_size)
@@ -121,3 +126,4 @@ root.after(100, loop)
 root.geometry("500x500") #sets up window size. TODO- make window a bit shorter
 root.title("CO2 Sensor") #names the window
 root.mainloop() #starts the tkinter mainloop
+
